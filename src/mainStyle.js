@@ -7,6 +7,7 @@ export const Container = styled.div`
     width: 80%;
     height: 80%;
     margin: 10%;
+    flex-wrap: wrap;
 
 `;
 

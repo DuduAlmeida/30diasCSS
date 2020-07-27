@@ -7,6 +7,8 @@ import Dia1 from './Dia1';
 import Dia2 from './Dia2';
 import Dia3 from './Dia3';
 import Dia4 from './Dia4/index';
+import Dia5 from './Dia5';
+import Dia6 from './Dia6';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -16,6 +18,8 @@ ReactDOM.render(
       <Route path="/dia2" component={Dia2}/>
       <Route path="/dia3" component={Dia3}/>
       <Route path="/dia4" component={Dia4}/>
+      <Route path="/dia5" component={Dia5}/>
+      <Route path="/dia6" component={Dia6}/>
     </Switch>
   </BrowserRouter>
   ,document.getElementById('root')
