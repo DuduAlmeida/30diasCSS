@@ -1,0 +1,170 @@
+﻿/* Main Styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px !important;
+}
+
+body {
+    margin: 0;
+    background-color: #ecf0f3;
+}
+
+.footer {    
+    width: 100%;
+    white-space: nowrap;    
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: white;
+}
+.footer-content{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    font-size: .9em;
+}
+
+.main {
+    /*min-height: calc(100% - 65px - 2em);*/
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content{
+    transform: scale(0.96);
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .container{
+    display:flex;
+    justify-content:space-around;
+}
+
+aside a{
+    text-decoration: none !important;
+}
+aside i {
+    color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif !important;
+    margin: 0 !important;
+}
+
+
+.card {
+    box-shadow: #f1f8fe -13px -13px 30px, #d1d9e6 15px 15px 30px;
+    background-color: white;
+    opacity: 100;
+    border: 0;
+    border-radius: 30px;
+    padding: 1em;
+}
+.card-header{
+    background-color:transparent;
+    border:0;
+
+    display:flex;
+    justify-content:space-between;
+}
+.list-btn {
+    margin-top: 2em;
+    display: flex;
+    justify-content: flex-end;
+}
+    .list-btn > .btn {
+        margin: 0 0.2em;
+    }
+.btn.botao {
+    color: white;
+    background: linear-gradient(145deg, #1c5b9e, #3b9cda, #3bafda);
+    animation: movimento-volta-botao 1s ease-in-out forwards;
+}
+.btn.botao:hover {
+    animation: movimento-ida-botao 1s  ease-in-out forwards;
+}
+
+#header-logo{
+    display:flex;
+    align-items:center;
+}
+.logo-nc {
+    height: 2.5em;
+    width: 2.5em;
+    opacity: 0;
+    animation: mostra-logo 2s forwards;
+}
+    /*svg path {
+        stroke-width: 1px;
+        stroke: #e71837;
+        stroke-dasharray: 35;
+        stroke-dashoffset: 220;
+        fill: transparent;
+        animation: carrega-logo 5s forwards ease-in-out;
+    }*/
+
+.w50pc{
+    width: 50% !important;
+}
+
+.flex-drcolumn{
+    flex-direction: column !important;
+}
+.flex-drrow{
+    flex-direction: row !important;
+}
+
+
+/* Keyframes
+-------------------------------------------------- */
+@keyframes movimento-ida-botao {
+    to {
+        box-shadow: #d1d9e6 0.2em 0.3em 10px;        
+        /*background: linear-gradient(-55deg, #3e78b5, #3bafda);*/
+    }
+}
+
+@keyframes movimento-volta-botao {
+    from {
+        box-shadow: #d1d9e6 0.2em 0.3em 10px;
+        /*background: linear-gradient(-55deg, #1c5b9e, #3bafda);*/
+    }
+    to {        
+        /*background: linear-gradient(-55deg, #1c5b9e, #3bafda);*/
+        box-shadow: #d1d9e6 0em 0em 0px;
+    }
+}
+
+@keyframes carrega-logo{
+    to{
+        stroke-dashoffset:0;
+        stroke:none;
+    }
+}
+@keyframes mostra-logo {
+    to {
+        opacity:100;        
+    }
+}
+
+
+
+/* Media Query
+-------------------------------------------------- */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px !important;
+    }
+}

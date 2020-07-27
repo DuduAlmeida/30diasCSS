@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import App from './App';
+import Dia1 from './Dia1';
+import Dia2 from './Dia2';
+import Dia3 from './Dia3';
+import Dia4 from './Dia4/index';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact={true} component={App}/>
+      <Route path="/dia1" component={Dia1}/>
+      <Route path="/dia2" component={Dia2}/>
+      <Route path="/dia3" component={Dia3}/>
+      <Route path="/dia4" component={Dia4}/>
+    </Switch>
+  </BrowserRouter>
+  ,document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

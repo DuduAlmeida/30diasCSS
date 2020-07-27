@@ -1,25 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import LinkWrapper from './Helper/LinkWrapper';
+import { Container, Dia } from './mainStyle';
+import './site.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Container>
+      <Dia><a href="/dia1">Dia 1</a></Dia>
+      <Dia><a href="/dia2">Dia 2</a></Dia>
+      <Dia><a href="/dia3">Dia 3</a></Dia>
+      <Dia><a href="/dia4">Dia 4</a></Dia>
+      <Dia><a href="/dia5">Dia 5</a></Dia>
+    </Container>
+
   );
 }
 
